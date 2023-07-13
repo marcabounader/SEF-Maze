@@ -19,8 +19,6 @@
 * npm init -y (initiates the project and npm is package installer for node.js)
 * npm install phaser (adds module to package and downloads it)
 
-
-
 ## Run the game
 * install npm from this site: [node js](https://nodejs.org/en/download)
 * npm install -g parcel-bundler(install module wrapper globally to use for every project)
