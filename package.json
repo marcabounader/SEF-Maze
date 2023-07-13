@@ -1,0 +1,15 @@
+{
+  "name": "sef-maze",
+  "version": "1.0.0",
+  "description": "* the Landing page, should incorporate Parallax scrolling\r * The Landing page will feature a button that redirects users to the Maze Game.\r * Phaser, a JavaScript library\r * scoring system and consist of at least two levels (more levels, more points)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "phaser": "^3.60.0"
+  }
+}
