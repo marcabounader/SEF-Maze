@@ -20,7 +20,7 @@
 * npm install phaser (adds module to package and downloads it)
 
 ## Run the game
-* install npm from this site: [node js](https://nodejs.org/en/download)
+* install npm from this site: [node js 18.16.1](https://nodejs.org/en/download)
 * npm install -g parcel-bundler(install module wrapper globally to use for every project)
 * npm install -g browser-sync(to install http server for this project)
 * npm install(install packages and dependencies found in package-lock.json)
