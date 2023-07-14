@@ -3,7 +3,6 @@ const gameState = {}
 let maze_container=document.getElementById('maze-subcontainer');
 
 function preload() {
-  // this.load.image('maze', 'src/assets/maze.png');
   this.load.image('player', 'https://content.codecademy.com/courses/learn-phaser/codey.png');
   this.load.image({
     key: 'tiles',
@@ -14,11 +13,7 @@ function preload() {
 }
 
 function create() {
-  // gameState.cursors=this.input.keyboard.createCursorKeys();
-  // gameState.maze=this.add.image(0,0, 'maze');
-  // gameState.maze.setOrigin(0,0)
-  // maze.background.displayWidth=this.sys.canvas.width;
-  // maze.background.displayHeight=this.sys.canvas.height;
+
   // gameState.player = this.add.sprite(200, 0.5, 'player');
   // gameState.player.setOrigin(0,0)
 
