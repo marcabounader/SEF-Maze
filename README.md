@@ -13,18 +13,20 @@
 * Phaser, a JavaScript library
 * scoring system and consist of at least two levels (more levels, more points)
 
-## steps to install the phazer framework(already done but this is for knowledge)
+## steps to install the phaser framework(already done but this is for knowledge)
 
 * enter into directory
 * enter these commands:
 * npm init -y (initiates the project and npm is package installer for node.js)
 * npm install phaser (adds module to package and downloads it)
 
-## Run the game
+## Install packages to run the game
 * install npm from this site: [node js 18.16.1](https://nodejs.org/en/download)
 * npm install -g parcel-bundler(install module wrapper globally to use for every project)
 * npm install -g browser-sync(to install http server for this project)
 * npm install(install packages and dependencies found in package-lock.json)
+
+## Run the game
 * parcel watch game.js(create game.js and watch it for changes instead of stopping server each time we make changes to the game)
 * browser-sync start --server --files "." (to start the server)
 
