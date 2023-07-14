@@ -6,6 +6,8 @@
 * [phaser tutorial](https://www.codecademy.com/learn/learn-phaser)
 * [parallax](https://blog.logrocket.com/create-parallax-scrolling-css/#:~:text=Parallax%20scrolling%20is%20a%20computer,Video%20Player)
 * [parallax](https://www.w3schools.com/howto/howto_css_parallax.asp)
+* [tile map editor](https://thorbjorn.itch.io/tiled)
+* [using tile editor](https://medium.com/@Shakuro/phaser-js-tutorial-creating-and-loading-a-map-enabling-collisions-3ca33917a902)
 
 ## Requirements:
 
