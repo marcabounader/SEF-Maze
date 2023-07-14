@@ -20,6 +20,9 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     height:1000px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
 
 }
 

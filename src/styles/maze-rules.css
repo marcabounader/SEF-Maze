@@ -1,0 +1,44 @@
+
+.maze-info {
+  flex: 1;
+  display: flex;
+  background-color: #363738;
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+
+.maze-rules {
+  flex: 1;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.maze-info h1{
+  color:#fcfcfd;
+  font-size: 22px;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.maze-info p{
+  color:#dcdee1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 10px;
+  grid-row-gap: 24px;
+  flex:1;
+  display: flex;
+  font-family: Noto Sans Mono, sans-serif;
+}
+
+.maze-image {
+  flex: 1;
+  max-width: 400px;
+  height: auto;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 20px solid #363738;
+}
