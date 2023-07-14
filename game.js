@@ -1,13 +1,13 @@
 import Phaser from 'phaser'
 const gameState = {}
-let maze_container=document.getElementById('maze-subcontainer')
+let maze_container=document.getElementById('maze-subcontainer');
 
 function preload() {
-  this.load.image('person', '');
+//   this.load.image('person', '');
 }
 
 function create() {
-  gameState.person = this.add.sprite(150, 200, 'person');
+//   gameState.person = this.add.sprite(150, 200, 'person');
   gameState.cursors=this.input.keyboard.createCursorKeys();
 
 }
@@ -30,11 +30,11 @@ function update() {
 
 const config = {
 	type: Phaser.AUTO,
-	width: 400,
-	height: 500,
+	width: 800,
+	height: 600,
 	backgroundColor: "#5f2a55",
     autoCenter: Phaser.Scale.CENTER_BOTH,
-    parent,maze_container,
+    parent: maze_container,
 	scene: {
     preload,
     create,
