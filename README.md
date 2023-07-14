@@ -31,6 +31,5 @@
 * browser-sync start --server --files "." (to start the server)
 
 ## Tasks
-* landing page with parallex and button redirect and maze page
-* css for landing page and maze page
-* building the maze game
+* Update the pages and add some styling(loading the game and some animation and fix colors and change background maybe): Rayan - Chehadeh
+* building the maze game: Zeina - Faissal - Marc
