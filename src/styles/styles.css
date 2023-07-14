@@ -65,8 +65,10 @@ a{
   display:flex;
   flex-direction: column;
   background-color: #787c83;
+  flex-wrap: wrap;
 }
 
 canvas{
   align-self: center;
+  margin-top:1%;
 }
