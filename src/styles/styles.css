@@ -70,5 +70,6 @@ a{
 
 canvas{
   align-self: center;
-  margin-top:1%;
+  margin-top:auto;
+  margin-bottom: auto;
 }
