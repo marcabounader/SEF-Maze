@@ -4,6 +4,7 @@
 * [setting up phaser game](https://flaviocopes.com/phaser-setup/#:~:text=Let%E2%80%99s%20install%20phaser%20in%20a%20folder%20using%20npm%3A,import%20Phaser%20from%20%27phaser%27%20new%20Phaser.Game%28%29%20Now%20run)
 * [phaser tutorial](https://www.codecademy.com/learn/learn-phaser)
 * [parallax](https://blog.logrocket.com/create-parallax-scrolling-css/#:~:text=Parallax%20scrolling%20is%20a%20computer,Video%20Player)
+* [parallax](https://www.w3schools.com/howto/howto_css_parallax.asp)
 
 ## Requirements:
 
