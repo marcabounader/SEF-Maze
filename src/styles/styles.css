@@ -67,9 +67,3 @@ button{
   background-color: #787c83;
   flex-wrap: wrap;
 }
-
-canvas{
-  align-self: center;
-  margin-top:auto;
-  margin-bottom: auto;
-}
