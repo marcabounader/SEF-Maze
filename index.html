@@ -3,32 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/styles/styles.css">
-  <link rel="stylesheet" href="src/styles/maze-rules.css">
+  <link rel="stylesheet" href="src/styles/Main_Page_CSS/general.css">
+  <link rel="stylesheet" href="src/styles/Main_Page_CSS/navbar.css">
+  <link rel="stylesheet" href="src/styles/Main_Page_CSS/parallax.css">
+  <link rel="stylesheet" href="src/styles/Main_Page_CSS/maze-rules.css">
   <title>SEF Maze</title>
 </head>
-<body class='parallax'>
-    <nav>
-      <h1>SEF Maze</h1>
-    </nav>
-    <div>hello</div>
-    <section class="maze">
-      <div class="maze-info">
-        <div class="maze-rules">
-          <h1> Maze Rules</h1>
-          <p> 
-            // Our 14-week bootcamp is designed to equip aspiring developers with the technical and interpersonal skills needed to become professional software engineers.
-            Participants will learn essential concepts such a Version Control, Object-Oriented Programming, Database Management Systems, MVC DesigN
-            Patterns, Dependency Management, modern Web Frameworks, and AWS. The program also includes a soft-skills 
-            curriculum covering Communication & Interpersonal Skills, Professional Writing, Technical Presentations, Negotiation, and Interviewing, which 
-            will be taught through lectures, weekly projects, tech talks, and a final project to showcase their learning.
-          </p>
-        </div>
-        <img class="maze-image" src="../Photos/programs.png" alt="MAZE Image">
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <h1 class="navbar-title">Maze Game</h1>
+    </div>
+    <div class="navbar-right">
+      <div class="user-icon"></div>
+      <div class="burger-icon"></div>
+    </div>
+  </nav>
+
+
+
+  <div class="parallax-container">
+    <div class="parallax-content">
+      <div class="parallax-image"></div>
+      <div class="parallax-text">Welcome To The Maze Game</div>
+    </div>
+  </div>
+
+
+  <section class="maze">
+      <div class="maze-rules">
+        <h1>Maze Rules</h1>
+        <p>
+          // Our 14-week bootcamp is designed to equip aspiring developers with the technical and interpersonal skills needed to become professional software engineers.
+          Participants will learn essential concepts such as Version Control, Object-Oriented Programming, Database Management Systems, MVC Design Patterns, Dependency Management, modern Web Frameworks, and AWS. The program also includes a soft-skills curriculum covering Communication & Interpersonal Skills, Professional Writing, Technical Presentations, Negotiation, and Interviewing, which will be taught through lectures, weekly projects, tech talks, and a final project to showcase their learning.
+        </p>
       </div>
-    </section>
-    <section class="container">
-      <button onclick="window.location='maze.html';">Run the Game!</button>
-    </section>
+      <img class="maze-image" src="src/img/MazeImage/maze.png" alt="MAZE Image">
+  </section>
+
+  <div class="maze-position">
+    <button class="glow-on-hover" type="button" onclick="window.location.href = 'maze.html';">
+      Play Now
+    </button>
+  </div>
+
+  
+
 </body>
+
 </html>
