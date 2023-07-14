@@ -1,22 +1,45 @@
 import Phaser from 'phaser'
+const gameState = {}
+let maze_container=document.getElementById('maze-subcontainer')
+
+function preload() {
+  this.load.image('person', '');
+}
 
 function create() {
-    // Change "Codey's Adventures\n  in Code World" to the name of your game
-    this.add.text(50, 100, "Our Maze!", { font: "40px Times New Roman", fill: "#ffa0d0"});
-  
-    // Change "by Codecademy" to your name!
-    this.add.text(50, 300, "by Codecademy", { font: "20px Times New Roman", fill: "#ffa0d0"});
+  gameState.person = this.add.sprite(150, 200, 'person');
+  gameState.cursors=this.input.keyboard.createCursorKeys();
+
+}
+
+function update() {
+  if (gameState.cursors.left.isDown){
+    gameState.person.x-=5;
   }
-  
-  const config = {
-      type: Phaser.AUTO,
-      width: 800,
-      height: 600,
-      backgroundColor: "#5f2a55",
-      scene: {
-      create
-      }
-  };
-  
-  const game = new Phaser.Game(config);
-  
+  if (gameState.cursors.right.isDown){
+    gameState.person.x+=5;
+  }
+  if (gameState.cursors.up.isDown){
+    gameState.person.y-=5;
+
+  }
+  if (gameState.cursors.down.isDown){
+    gameState.person.y+=5;
+  }
+}
+
+const config = {
+	type: Phaser.AUTO,
+	width: 400,
+	height: 500,
+	backgroundColor: "#5f2a55",
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    parent,maze_container,
+	scene: {
+    preload,
+    create,
+    update
+	}
+}
+
+const game = new Phaser.Game(config)
