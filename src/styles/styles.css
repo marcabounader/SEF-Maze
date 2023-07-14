@@ -19,23 +19,31 @@ html, body {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+    height:1000px;
+
+}
+
+nav{
+  background-color: var(--background-color);
+  color:white;
+  width:100%;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+nav h1{
+  margin-left:20px;
 }
 
 .container{
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  height:1000px;
+  height:100%;
 }
-nav{
-  background-color: var(--background-color);
-  color:white;
-  width:100%;
-}
-nav h1{
-  margin-left:20px;
-}
+
+
 a{
   text-decoration: none;
   cursor: pointer;
@@ -50,6 +58,15 @@ a{
   flex-direction:row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-
+.maze-body{
+  background-color: #787c83;
+}
+.maze-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
