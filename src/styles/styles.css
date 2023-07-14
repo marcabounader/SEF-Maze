@@ -61,12 +61,12 @@ a{
   margin-bottom: 10px;
 }
 
-.maze-body{
-  background-color: #787c83;
-}
 .maze-container{
   display:flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  background-color: #787c83;
+}
+
+canvas{
+  align-self: center;
 }
