@@ -10,8 +10,8 @@ function create() {
   
   const config = {
       type: Phaser.AUTO,
-      width: 1000,
-      height: 800,
+      width: 800,
+      height: 600,
       backgroundColor: "#5f2a55",
       scene: {
       create
