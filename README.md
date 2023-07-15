@@ -22,14 +22,14 @@
 * npm install phaser (adds module to package and downloads it)
 
 ## Install packages to run the game
-* install npm from this site: [node js 18.16.1](https://nodejs.org/en/download)
+* install node js from this site: [node js 18.16.1](https://nodejs.org/en/download)
 * npm install -g parcel-bundler(install module wrapper globally to use for every project)
 * npm install -g browser-sync(to install http server for this project)
 * npm install(install packages and dependencies found in package-lock.json)
 
 ## Run the game
 * parcel watch game.js(create game.js and watch it for changes instead of stopping server each time we make changes to the game)
-* browser-sync start --server --files "." (to start the server)
+* browser-sync start --server --files "." (to start the server) or install Live Server extension. 
 
 ## Tasks
 * Update the pages and add some styling(loading the game and some animation and fix colors and change background maybe): Rayan - Chehadeh
