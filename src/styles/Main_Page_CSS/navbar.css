@@ -2,9 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f2f2f2;
-    padding: 10px;
+    background: linear-gradient(to bottom,#ecedfd, transparent);
+    padding: 30px;
     z-index: 10000;
+    color:#0a0b36;
   }
   
   .navbar-left {
