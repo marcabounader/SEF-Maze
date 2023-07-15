@@ -1,12 +1,14 @@
 
 .maze {
+  position: relative;
   display: flex;
-  background-color: #363738;
   border-radius: 20px;
   flex-wrap: wrap;
-  margin: 70px 30px;
+  margin: 70px 70px;
   padding: 20px;
-  justify-content: space-between;
+  justify-content: center;
+  align-content: center;
+  background-color: #2b1055;
 }
 
 .maze-rules {
@@ -42,5 +44,5 @@
   height: auto;
   border-radius: 50px;
   object-fit: cover;
-  border: 20px solid #363738;
+  border: 20px solid #7597de;
 }
