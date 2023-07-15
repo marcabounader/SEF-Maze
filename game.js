@@ -8,7 +8,7 @@ export default class Game extends Phaser.Scene{
     }
 
     create(){
-        // this.maze=this.add.image(150,150,'maze')
+        // this.maze=this.add.image(150,150,'tiles')
         // this.maze.setOrigin(0,0)
         const map=this.make.tilemap({key:'maze'});
         // const tileset=map.addTilesetImage('maze','maze')
