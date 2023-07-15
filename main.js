@@ -6,8 +6,8 @@ let maze_container=document.getElementById('maze-subcontainer');
 
 const config = {
 	type: Phaser.AUTO,
-	width: 1000,
-	height: 800,
+	width: 1200,
+	height: 850,
 	backgroundColor: "#5f2a55",
     autoCenter: Phaser.Scale.CENTER_BOTH,
     parent: maze_container,

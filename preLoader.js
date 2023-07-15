@@ -4,9 +4,11 @@ export default class preLoader extends Phaser.Scene{
     }
 
     preload(){
-        this.load.image('tiles','src\\assets\\tilemaps\\walls.png')
+        this.load.image('tiles','src\\assets\\tilemaps\\walls_1x2.png')
 
-        this.load.tilemapTiledJSON('maze','src\\assets\\tilemaps\\walls.json');
+        this.load.tilemapTiledJSON('maze','src\\assets\\tilemaps\\maze.json');
+
+        this.load.atlas('mazer','src\\assets\\sprites\\person.png','src\\assets\\sprites\\person_atlas.json')
     }
 
     create(){
