@@ -1,18 +1,24 @@
+import ScoreLabel from "./ScoreLabel";
+
+
 export default class levelTwo extends Phaser.Scene{
     constructor(){
         super('levelTwo')
     }
-
+    init(data){
+      this.score=data.getScore();
+    }
     preload(){
     
     }
 
     create(){
+        let score=this.init
         const map=this.make.tilemap({key:'maze-2'});
         const tileset=map.addTilesetImage('walls_1x2','tiles',32,58)
         const maze_wall=map.createLayer('Tile Layer 1',tileset,100,50);
         maze_wall.setCollisionBetween(0,8);
-
+        this.scoreLabel = this.createScoreLabel(16, 16, this.score);
         this.player = this.physics.add.sprite(560, 70, 'player');
         this.player.setScale(0.9,0.9);
         this.player.setCollideWorldBounds(true);
@@ -34,8 +40,77 @@ export default class levelTwo extends Phaser.Scene{
     
         })
         this.physics.add.collider(this.player,this.circle,() => {
-          this.scene.start('levelThree')
+          this.scene.start('levelThree',this.scoreLabel)
         })  
+        this.star_1 = this.physics.add.sprite(200,400,'star');
+        this.star_1.setScale(0.5,0.5);
+        
+        this.physics.add.overlap(
+          this.player, 
+          this.star_1, 
+          (player,star) =>{
+            star.disableBody(true, true);
+    
+            this.scoreLabel.add(10);
+          }, 
+        null, 
+        this);
+    
+        this.star_2 = this.physics.add.sprite(400,600,'star');
+        this.star_2.setScale(0.5,0.5);
+        
+        this.physics.add.overlap(
+          this.player, 
+          this.star_2, 
+          (player,star) =>{
+            star.disableBody(true, true);
+    
+            this.scoreLabel.add(10);
+          }, 
+        null, 
+        this);
+    
+        this.star_3 = this.physics.add.sprite(200,750,'star');
+        this.star_3.setScale(0.5,0.5);
+    
+        this.physics.add.overlap(
+          this.player, 
+          this.star_3, 
+          (player,star) =>{
+            star.disableBody(true, true);
+    
+            this.scoreLabel.add(10);
+          }, 
+        null, 
+        this);
+    
+        this.star_4 = this.physics.add.sprite(550,220,'star');
+        this.star_4.setScale(0.5,0.5);
+        
+        this.physics.add.overlap(
+          this.player, 
+          this.star_4, 
+          (player,star) =>{
+            star.disableBody(true, true);
+    
+            this.scoreLabel.add(10);
+          }, 
+        null, 
+        this);
+    
+        this.star_5 = this.physics.add.sprite(750,500,'star');
+        this.star_5.setScale(0.5,0.5);
+        
+        this.physics.add.overlap(
+          this.player, 
+          this.star_5, 
+          (player,star) =>{
+            star.disableBody(true, true);
+    
+            this.scoreLabel.add(10);
+          }, 
+        null, 
+        this);
       }
       update(){
     
@@ -62,6 +137,14 @@ export default class levelTwo extends Phaser.Scene{
             this.player.setVelocityX(0);
           }
       }
-
+      createScoreLabel(x, y, score)
+      {
+        const style = { fontSize: '32px', fill: '#000' }
+        const label = new ScoreLabel(this, x, y, score, style)
+    
+        this.add.existing(label)
+    
+        return label
+      }
 
 }

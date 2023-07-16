@@ -1,6 +1,10 @@
+import ScoreLabel from "./ScoreLabel";
+
 export default class preLoader extends Phaser.Scene{
     constructor(){
         super('preLoader')
+        this.ScoreLabel=undefined;
+
     }
 
     preload(){
@@ -18,10 +22,12 @@ export default class preLoader extends Phaser.Scene{
         this.load.tilemapTiledJSON("maze-3","src\\assets\\tilemaps\\map-3\\map-3.json") 
         this.load.tilemapTiledJSON("maze-4","src\\assets\\tilemaps\\map-4\\map-4.json") 
         
+        this.load.image('star', 'src\\assets\\sprites\\star.png');
 
     }
 
     create(){
+            
 
            this.anims.create({
             key: 'left',

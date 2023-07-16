@@ -6,7 +6,7 @@ import levelFour from './src/scripts/maze_levels/levelFour.js';
 import levelThree from './src/scripts/maze_levels/levelThree.js';
 
 let maze_container=document.getElementById('maze-subcontainer');
-
+let score=11;
 const config = {
 	type: Phaser.AUTO,
 	width: 1200,
@@ -21,7 +21,7 @@ const config = {
             debug: true
         }
     },
-    scene: [preLoader,levelOne,levelTwo,levelThree,levelFour]
+    scene: [preLoader,levelOne,levelTwo,levelThree,levelFour],
 };
 
 const game = new Phaser.Game(config);
