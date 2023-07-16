@@ -11,9 +11,10 @@ export default class levelOne extends Phaser.Scene{
 
 
     //To Add player+position
-    this.player = this.physics.add.sprite(this.game.config.width/2, 0, 'player');
+    this.player = this.physics.add.sprite(790, 220, 'player');
     //To set scale
     this.player.setScale(1,1);
+    this.player.setCollideWorldBounds(true);
     this.cursors=this.input.keyboard.createCursorKeys();
 
 

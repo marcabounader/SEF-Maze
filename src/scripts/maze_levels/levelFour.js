@@ -18,9 +18,10 @@ export default class levelFour extends Phaser.Scene{
         this.cursors=this.input.keyboard.createCursorKeys();
 
         //To Add player+position
-        this.player = this.physics.add.sprite(this.game.config.width/2, 0, 'player');
+        this.player = this.physics.add.sprite(950, 70, 'player');
         //To set scale
         this.player.setScale(1,1);
+        this.player.setCollideWorldBounds(true);
         this.circle=this.physics.add.existing(this.add.circle(110,740,10,'#00ff04'));
 
     
