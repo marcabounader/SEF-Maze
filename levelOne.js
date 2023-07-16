@@ -55,7 +55,12 @@ export default class levelOne extends Phaser.Scene{
     });
 
 
-
+  let debugGraphics=this.add.graphics().setAlpha(0.7);
+      maze_wall.renderDebug(debugGraphics,{
+          tileColor:null,
+          collidingTileColor: new Phaser.Display.Color(243,234,48,255),
+          faceColor:new Phaser.Display.Color(40,39,37,255)
+      })
 
     this.cursors=this.input.keyboard.createCursorKeys();
     this.physics.add.collider(this.player,maze_wall,() => {
