@@ -16,26 +16,32 @@ export default class levelOne extends Phaser.Scene{
     this.player.setScale(1,1);
     this.cursors=this.input.keyboard.createCursorKeys();
 
- 
 
+    this.circle=this.physics.add.existing(this.add.circle(280,770,10,'#00ff04'));
 
-  let debugGraphics=this.add.graphics().setAlpha(0.7);
-  maze_wall.renderDebug(debugGraphics,{
+    let debugGraphics=this.add.graphics().setAlpha(0.7);
+    maze_wall.renderDebug(debugGraphics,{
           tileColor:null,
           collidingTileColor: new Phaser.Display.Color(243,234,48,255),
           faceColor:new Phaser.Display.Color(40,39,37,255)
-      })
+    })
 
     this.physics.add.collider(this.player,maze_wall,() => {
 
     })
-    // this.time.addEvent({
-    //   delay: 3000,
-    //   loop: false,
-    //   callback: () => {
-    //       this.scene.start("levelTwo");
-    //   }
-    // })
+    this.physics.add.collider(this.player,this.circle,() => {
+      this.scene.start('levelTwo')
+    })
+
+
+    
+    this.time.addEvent({
+      delay: 1000,
+      loop: false,
+      callback: () => {
+          this.scene.start("levelTwo");
+      }
+    })
 
 
   }

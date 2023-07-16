@@ -23,6 +23,7 @@ export default class levelTwo extends Phaser.Scene{
         this.player.setScale(1,1);
         
         this.cursors=this.input.keyboard.createCursorKeys();
+        this.circle=this.physics.add.existing(this.add.circle(470,840,10,'#00ff04'));
 
     
     
@@ -37,13 +38,16 @@ export default class levelTwo extends Phaser.Scene{
         this.physics.add.collider(this.player,maze_wall,() => {
     
         })
-        // this.time.addEvent({
-        //   delay: 3000,
-        //   loop: false,
-        //   callback: () => {
-        //       this.scene.start("levelThree");
-        //   }
-        // })
+        this.physics.add.collider(this.player,this.circle,() => {
+          this.scene.start('levelThree')
+        })
+        this.time.addEvent({
+          delay: 1000,
+          loop: false,
+          callback: () => {
+              this.scene.start("levelThree");
+          }
+        })
   
     
       }
