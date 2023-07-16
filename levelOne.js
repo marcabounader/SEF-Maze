@@ -1,3 +1,4 @@
+import Phaser from "phaser"
 export default class levelOne extends Phaser.Scene{
     constructor(){
         super('levelOne')

@@ -6,7 +6,7 @@ export default class levelTwo extends Phaser.Scene{
 
     preload(){
         this.load.image("wall-tiles","src/img/MazeImage/wall-tiles.png")
-        this.load.tilemapTiledJSON("map1","src/assets/tilemaps/map1.json")
+        this.load.tilemapTiledJSON("map-3","src/assets/tilemaps/map-3.json")
     }
 
     create(){
@@ -16,7 +16,7 @@ export default class levelTwo extends Phaser.Scene{
         // map.createLayer('maze',tileset)
         const map=this.make.tilemap({key:"map",tileWidth:32,tileHeight:32});
         const tileset=map.addTilesetImage("TileBasic","wall-tiles")
-        const layer=map.createLayer("Tile Layer 1",tileset,0,0)
+        const layer=map.createLayer("layerWall",tileset,0,0)
     }
 
     update(){
