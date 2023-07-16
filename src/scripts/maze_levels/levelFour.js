@@ -8,8 +8,6 @@ export default class levelFour extends Phaser.Scene{
     }
 
     create(){
-        // this.maze=this.add.image(150,150,'tiles')
-        // this.maze.setOrigin(0,0)
         const map=this.make.tilemap({key:'maze-4'});
         const tileset=map.addTilesetImage('BasicTiles','wall-tiles',32,32)
         const maze_wall=map.createLayer('layerStone',tileset,10,50);
