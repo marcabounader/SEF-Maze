@@ -16,7 +16,7 @@ export default class levelOne extends Phaser.Scene{
     maze_wall.setCollisionBetween(0,55);
 
     this.scoreLabel = this.createScoreLabel(16, 16, 0);
-
+    this.add.text(1050,16,"level 1",{ fontSize: '32px', fill: '#000' })
     this.player = this.physics.add.sprite(870, 80, 'player');
     this.player.setScale(1,1);
     this.player.setCollideWorldBounds(true);

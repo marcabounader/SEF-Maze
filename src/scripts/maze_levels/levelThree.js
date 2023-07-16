@@ -15,7 +15,8 @@ export default class levelThree extends Phaser.Scene{
       const map=this.make.tilemap({key:'maze-1'});
       const tileset=map.addTilesetImage('walls_1x2','tiles',32,58)
       const maze_wall=map.createLayer('maze-wall',tileset,15,5).setScale(1.1);
-  
+      this.add.text(1050,16,"level 3",{ fontSize: '32px', fill: '#000' })
+
       this.scoreLabel = this.createScoreLabel(16, 16, this.score);
       this.cursors=this.input.keyboard.createCursorKeys();
       this.player = this.physics.add.sprite(520, 50, 'player');

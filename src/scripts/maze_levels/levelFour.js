@@ -16,7 +16,7 @@ export default class levelFour extends Phaser.Scene{
         const tileset=map.addTilesetImage('BasicTiles','wall-tiles',32,32)
         const maze_wall=map.createLayer('layerStone',tileset,15,10).setScale(1.1);
         maze_wall.setCollisionBetween(0,55);
-
+        this.add.text(1050,16,"level 4",{ fontSize: '32px', fill: '#000' })
         this.scoreLabel = this.createScoreLabel(16, 16, this.score);
         this.cursors=this.input.keyboard.createCursorKeys();
 

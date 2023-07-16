@@ -18,6 +18,7 @@ export default class levelTwo extends Phaser.Scene{
         const tileset=map.addTilesetImage('walls_1x2','tiles',32,58)
         const maze_wall=map.createLayer('Tile Layer 1',tileset,100,50);
         maze_wall.setCollisionBetween(0,8);
+        this.add.text(1050,16,"level 2",{ fontSize: '32px', fill: '#000' })
         this.scoreLabel = this.createScoreLabel(16, 16, this.score);
         this.player = this.physics.add.sprite(560, 70, 'player');
         this.player.setScale(0.9,0.9);

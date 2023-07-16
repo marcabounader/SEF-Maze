@@ -36,6 +36,3 @@
 * parcel watch main.js(create game.js and watch it for changes instead of stopping server each time we make changes to the game)
 * browser-sync start --server --files "." (to start the server)
 
-## Tasks
-* Update the pages and add some styling(loading the game and some animation and fix colors and change background maybe): Rayan - Chehadeh
-* building the maze game: Zeina - Faissal - Marc
