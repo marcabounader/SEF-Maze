@@ -37,13 +37,13 @@ export default class levelTwo extends Phaser.Scene{
         this.physics.add.collider(this.player,maze_wall,() => {
     
         })
-        this.time.addEvent({
-          delay: 3000,
-          loop: false,
-          callback: () => {
-              this.scene.start("levelThree");
-          }
-        })
+        // this.time.addEvent({
+        //   delay: 3000,
+        //   loop: false,
+        //   callback: () => {
+        //       this.scene.start("levelThree");
+        //   }
+        // })
   
     
       }

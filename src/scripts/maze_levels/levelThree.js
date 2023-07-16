@@ -33,13 +33,13 @@ export default class levelThree extends Phaser.Scene{
     })
     //To set scale
     this.player.setScale(1,1);
-    this.time.addEvent({
-      delay: 3000,
-      loop: false,
-      callback: () => {
-          this.scene.start("levelFour");
-      }
-    })
+    // this.time.addEvent({
+    //   delay: 3000,
+    //   loop: false,
+    //   callback: () => {
+    //       this.scene.start("levelFour");
+    //   }
+    // })
     
 
   }
