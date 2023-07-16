@@ -2,9 +2,6 @@ export default class levelOne extends Phaser.Scene{
   constructor(){
       super('levelOne')
   }
-  preload(){
-  
-  }
   create(){
     const map=this.make.tilemap({key:'maze'});
     const tileset=map.addTilesetImage('walls_1x2','tiles',32,58)
@@ -50,7 +47,7 @@ export default class levelOne extends Phaser.Scene{
     this.anims.create({
       key: 'down',
       frames: this.anims.generateFrameNumbers('player', { start: 6, end: 11 }),
-      frameRate: 10,
+      frameRate: 50,
       repeat: -1
     });
 
