@@ -14,7 +14,7 @@ export default class levelOne extends Phaser.Scene{
         const tileset=map.addTilesetImage('walls_1x2','tiles',32,58)
         const maze_wall=map.createLayer('maze-wall',tileset,100,0);
     
-        maze_wall.setCollisionByProperty({collides:true});
+      //  maze_wall.setCollisionByProperty({collides:true});
         // maze_wall.setCollisionBetween(0,9);
 
 
@@ -22,9 +22,9 @@ export default class levelOne extends Phaser.Scene{
         this.player = this.add.sprite(200, 0.5, 'player');
         this.player.setScale(0.5,0.5);
         this.cursors=this.input.keyboard.createCursorKeys();
-        this.physics.add.collider(this.player,maze_wall,() => {
+        // this.physics.add.collider(this.player,maze_wall,() => {
             
-        })
+        // })
 
         const debugGraphics=this.add.graphics().setAlpha(0.7);
         maze_wall.renderDebug(debugGraphics,{
@@ -48,5 +48,19 @@ export default class levelOne extends Phaser.Scene{
           if (this.cursors.down.isDown){
             this.player.y+=2;
           }
+          
+        // Update your game logic here
+        function playerHasCompletedLevel1(){
+          return true;
+        }
+        
+        if (playerHasCompletedLevel1()) {
+          // Load level 2 if the player has completed level 1
+         this.scene.start('levelTwo');
+        }
+        
+      
     }
+
+
 }
