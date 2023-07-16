@@ -1,8 +1,8 @@
 import Phaser from 'phaser';
+import preLoader from './preLoader.js';
 import levelOne from './levelOne.js';
 import levelTwo from './levelTwo.js';
 
-import preLoader from './preLoader.js';
 
 let maze_container=document.getElementById('maze-subcontainer');
 
