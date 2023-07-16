@@ -35,13 +35,13 @@ export default class levelOne extends Phaser.Scene{
 
 
     
-    this.time.addEvent({
-      delay: 1000,
-      loop: false,
-      callback: () => {
-          this.scene.start("levelTwo");
-      }
-    })
+    // this.time.addEvent({
+    //   delay: 1000,
+    //   loop: false,
+    //   callback: () => {
+    //       this.scene.start("levelTwo");
+    //   }
+    // })
 
 
   }

@@ -41,13 +41,13 @@ export default class levelTwo extends Phaser.Scene{
         this.physics.add.collider(this.player,this.circle,() => {
           this.scene.start('levelThree')
         })
-        this.time.addEvent({
-          delay: 1000,
-          loop: false,
-          callback: () => {
-              this.scene.start("levelThree");
-          }
-        })
+        // this.time.addEvent({
+        //   delay: 1000,
+        //   loop: false,
+        //   callback: () => {
+        //       this.scene.start("levelThree");
+        //   }
+        // })
   
     
       }
