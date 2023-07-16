@@ -5,7 +5,7 @@ export default class levelOne extends Phaser.Scene{
   create(){
     const map=this.make.tilemap({key:"maze-3"});
     const tileset=map.addTilesetImage("TileBasic","wall-tiles")
-    const maze_wall=map.createLayer("layerWall",tileset,200,285)
+    const maze_wall=map.createLayer("layerWall",tileset,50,50).setScale(1.4)
 
     maze_wall.setCollisionBetween(0,55);
 
@@ -18,7 +18,7 @@ export default class levelOne extends Phaser.Scene{
     this.cursors=this.input.keyboard.createCursorKeys();
 
 
-    this.circle=this.physics.add.existing(this.add.circle(280,840,10,'#00ff04'));
+    this.circle=this.physics.add.existing(this.add.circle(160,830,15,'#00ff04'));
 
     let debugGraphics=this.add.graphics().setAlpha(0.7);
     maze_wall.renderDebug(debugGraphics,{
@@ -33,16 +33,6 @@ export default class levelOne extends Phaser.Scene{
     this.physics.add.collider(this.player,this.circle,() => {
       this.scene.start('levelTwo')
     })
-
-
-    
-    // this.time.addEvent({
-    //   delay: 1000,
-    //   loop: false,
-    //   callback: () => {
-    //       this.scene.start("levelTwo");
-    //   }
-    // })
 
 
   }
