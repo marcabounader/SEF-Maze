@@ -6,6 +6,12 @@ import preLoader from './preLoader.js';
 
 let maze_container=document.getElementById('maze-subcontainer');
 
+// export default new Phaser.levelOne({
+//     type: Phaser.AUTO,
+//     width: 1200,
+//     height: 850,
+//     scene: levelOne
+//     })
 const config = {
 	type: Phaser.AUTO,
 	width: 1200,
