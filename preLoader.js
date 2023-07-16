@@ -7,8 +7,9 @@ export default class preLoader extends Phaser.Scene{
 
         this.load.image('tiles','src\\assets\\tilemaps\\walls_1x2.png')
         this.load.tilemapTiledJSON('maze','src\\assets\\tilemaps\\map-1\\maze.json');
+
         // Player+Animation
-        this.load.spritesheet('player', 'src\\assets\\sprites\\player.png', { frameWidth: 18, frameHeight: 25 });
+        this.load.spritesheet('player', 'src\\assets\\sprites\\player.png', { frameWidth: 21, frameHeight: 26 });
         this.load.atlas('player', 'src\\assets\\sprites\\player.png', 'src\\assets\\sprites\\player.json')
     }
 
