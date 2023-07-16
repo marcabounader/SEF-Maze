@@ -10,15 +10,13 @@ export default class levelThree extends Phaser.Scene{
   create(){
       const map=this.make.tilemap({key:'maze-1'});
       const tileset=map.addTilesetImage('walls_1x2','tiles',32,58)
-      const maze_wall=map.createLayer('maze-wall',tileset,100,80);
+      const maze_wall=map.createLayer('maze-wall',tileset,15,5).setScale(1.1);
   
-      this.player = this.physics.add.sprite(570, 50, 'player');
-      this.player.setCollideWorldBounds(true);
-      this.player.setScale(1,1);
-
-      this.circle=this.physics.add.existing(this.add.circle(595,830,10,'0x08000'));
-
       this.cursors=this.input.keyboard.createCursorKeys();
+    //To Add player+position
+    this.player = this.physics.add.sprite(520, 50, 'player');
+    this.player.setCollideWorldBounds(true);
+    this.circle=this.physics.add.existing(this.add.circle(560,830,10,'0x08000'));
 
       maze_wall.setCollisionBetween(0,8);
 

@@ -10,11 +10,11 @@ export default class levelOne extends Phaser.Scene{
     maze_wall.setCollisionBetween(0,55);
 
 
-    this.player = this.physics.add.sprite(840, 50, 'player');
+    this.player = this.physics.add.sprite(870, 80, 'player');
     this.player.setScale(1,1);
     this.player.setCollideWorldBounds(true);
 
-    this.circle=this.physics.add.existing(this.add.circle(160,830,15,'#0x08000'));
+    this.circle=this.physics.add.existing(this.add.circle(160,830,15,'0x08000'));
 
     this.cursors=this.input.keyboard.createCursorKeys();
 
