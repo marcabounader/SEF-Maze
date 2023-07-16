@@ -18,7 +18,7 @@ export default class levelOne extends Phaser.Scene{
     this.scoreLabel = this.createScoreLabel(16, 16, 0);
     this.add.text(1050,16,"level 1",{ fontSize: '32px', fill: '#000' })
     this.player = this.physics.add.sprite(870, 80, 'player');
-    this.player.setScale(1,1);
+    this.player.setScale(1.6);
     this.player.setCollideWorldBounds(true);
 
     this.circle=this.physics.add.existing(this.add.circle(160,830,15,'0x08000'));
