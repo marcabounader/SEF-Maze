@@ -26,7 +26,7 @@ export default class levelOne extends Phaser.Scene{
             
         // })
 
-        const debugGraphics=this.add.graphics().setAlpha(0.7);
+        let debugGraphics=this.add.graphics().setAlpha(0.7);
         maze_wall.renderDebug(debugGraphics,{
             tileColor:null,
             collidingTileColor: new Phaser.Display.Color(243,234,48,255),
@@ -37,6 +37,7 @@ export default class levelOne extends Phaser.Scene{
     update(){
         if (this.cursors.left.isDown){
             this.player.x-=2;
+            this.scene.start('levelTwo');   
           }
           if (this.cursors.right.isDown){
             this.player.x+=2;
@@ -48,18 +49,9 @@ export default class levelOne extends Phaser.Scene{
           if (this.cursors.down.isDown){
             this.player.y+=2;
           }
-          
-        // Update your game logic here
-        function playerHasCompletedLevel1(){
-          return true;
-        }
-        
-        if (playerHasCompletedLevel1()) {
+
           // Load level 2 if the player has completed level 1
-         this.scene.start('levelTwo');
-        }
-        
-      
+
     }
 
 

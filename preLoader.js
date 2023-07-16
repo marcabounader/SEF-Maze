@@ -12,8 +12,7 @@ export default class preLoader extends Phaser.Scene{
         // this.load.atlas('player','src\\assets\\sprites\\player.png','src\\assets\\sprites\\player.json')
         this.load.image('player', 'https://content.codecademy.com/courses/learn-phaser/codey.png');
 
-        this.load.tilemapTiledJSON('maze-1','src\\assets\\tilemaps\\map-2\\maze-2.json');
-
+        this.load.tilemapTiledJSON('maze-2','src\\assets\\tilemaps\\map-2\\maze-2.json');
 
     }
 
