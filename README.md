@@ -33,7 +33,7 @@
 * npm install(install packages and dependencies found in package-lock.json)
 
 ## Run the game
-* parcel watch game.js(create game.js and watch it for changes instead of stopping server each time we make changes to the game)
+* parcel watch main.js(create game.js and watch it for changes instead of stopping server each time we make changes to the game)
 * browser-sync start --server --files "." (to start the server)
 
 ## Tasks

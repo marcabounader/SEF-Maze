@@ -2,10 +2,16 @@ import Phaser from 'phaser';
 import preLoader from './preLoader.js';
 import levelOne from './levelOne.js';
 import levelTwo from './levelTwo.js';
-
+import levelFour from './levelFour.js';
 
 let maze_container=document.getElementById('maze-subcontainer');
 
+// export default new Phaser.levelOne({
+//     type: Phaser.AUTO,
+//     width: 1200,
+//     height: 850,
+//     scene: levelOne
+//     })
 const config = {
 	type: Phaser.AUTO,
 	width: 1200,
@@ -20,7 +26,7 @@ const config = {
             debug: true
         }
     },
-    scene: [preLoader,levelOne,levelTwo]
+    scene: [preLoader,levelOne,levelTwo,levelThree,levelFour]
 };
 
 const game = new Phaser.Game(config);
