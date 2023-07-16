@@ -3,6 +3,7 @@ import levelOne from './levelOne.js';
 import levelTwo from './levelTwo.js';
 import preLoader from './preLoader.js';
 import levelThree from './levelThree.js';
+import levelFour from './levelFour.js';
 
 let maze_container=document.getElementById('maze-subcontainer');
 
@@ -26,7 +27,7 @@ const config = {
             debug: true
         }
     },
-    scene: [preLoader,levelOne,levelTwo,levelThree]
+    scene: [preLoader,levelOne,levelTwo,levelThree,levelFour]
 };
 
 const game = new Phaser.Game(config);
