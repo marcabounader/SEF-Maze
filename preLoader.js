@@ -5,6 +5,7 @@ export default class preLoader extends Phaser.Scene{
 
     preload(){
 
+        //Tileheight must be 30!!!
         this.load.image('tiles','src\\assets\\tilemaps\\walls_1x2.png')
         this.load.tilemapTiledJSON('maze','src\\assets\\tilemaps\\map-1\\maze.json');
 

@@ -55,7 +55,7 @@
          "name":"walls_1x2",
          "spacing":0,
          "tilecount":8,
-         "tileheight":40,
+         "tileheight":30,
          "tiles":[
                 {
                  "id":0,
