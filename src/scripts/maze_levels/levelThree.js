@@ -8,8 +8,6 @@ export default class levelThree extends Phaser.Scene{
   }
 
   create(){
-      // this.maze=this.add.image(150,150,'tiles')
-      // this.maze.setOrigin(0,0)
       const map=this.make.tilemap({key:'maze-1'});
       const tileset=map.addTilesetImage('walls_1x2','tiles',32,58)
       const maze_wall=map.createLayer('maze-wall',tileset,15,5).setScale(1.1);
@@ -27,7 +25,7 @@ export default class levelThree extends Phaser.Scene{
               tileColor:null,
               collidingTileColor: new Phaser.Display.Color(243,234,48,255),
               faceColor:new Phaser.Display.Color(40,39,37,255)
-          })
+      })
     
 
     this.physics.add.collider(this.player,maze_wall,() => {
@@ -36,17 +34,6 @@ export default class levelThree extends Phaser.Scene{
     this.physics.add.collider(this.player,this.circle,() => {
       this.scene.start('levelFour')
     })
-    //To set scale
-    this.player.setScale(1,1);
-    // this.time.addEvent({
-    //   delay: 1000,
-    //   loop: false,
-    //   callback: () => {
-    //       this.scene.start("levelFour");
-    //   }
-    // })
-    
-
   }
   update(){
 

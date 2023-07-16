@@ -15,6 +15,7 @@ export default class levelFour extends Phaser.Scene{
         const maze_wall=map.createLayer('layerStone',tileset,15,10).setScale(1.1);
         maze_wall.setCollisionBetween(0,55);
 
+
         this.cursors=this.input.keyboard.createCursorKeys();
 
         //To Add player+position
@@ -24,27 +25,22 @@ export default class levelFour extends Phaser.Scene{
         this.player.setCollideWorldBounds(true);
         this.circle=this.physics.add.existing(this.add.circle(30,770,12,'#00ff04'));
 
+        this.cursors=this.input.keyboard.createCursorKeys();
     
-      let debugGraphics=this.add.graphics().setAlpha(0.7);
-      maze_wall.renderDebug(debugGraphics,{
-              tileColor:null,
-              collidingTileColor: new Phaser.Display.Color(243,234,48,255),
-              faceColor:new Phaser.Display.Color(40,39,37,255)
-          })
+        let debugGraphics=this.add.graphics().setAlpha(0.7);
+        maze_wall.renderDebug(debugGraphics,{
+                tileColor:null,
+                collidingTileColor: new Phaser.Display.Color(243,234,48,255),
+                faceColor:new Phaser.Display.Color(40,39,37,255)
+        })
     
         this.physics.add.collider(this.player,maze_wall,() => {
     
         })
         this.physics.add.collider(this.player,this.circle,() => {
-          // this.scene.start('levelTwo')
+
         })
-        // this.time.addEvent({
-        //   delay: 3000,
-        //   loop: false,
-        //   callback: () => {
-        //       this.scene.start("levelOne");
-        //   }
-        // })
+
       }
       update(){ 
     
