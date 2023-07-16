@@ -4,6 +4,7 @@ export default class preLoader extends Phaser.Scene{
     }
 
     preload(){
+
         this.load.image('tiles','src\\assets\\tilemaps\\walls_1x2.png')
 
         this.load.tilemapTiledJSON('maze','src\\assets\\tilemaps\\map-1\\maze.json');
@@ -14,7 +15,7 @@ export default class preLoader extends Phaser.Scene{
     }
 
     create(){
-        this.scene.start('Game');
+        this.scene.start('levelOne');
     }
 
 }
