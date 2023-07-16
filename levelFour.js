@@ -11,8 +11,8 @@ export default class levelFour extends Phaser.Scene{
         // this.maze=this.add.image(150,150,'tiles')
         // this.maze.setOrigin(0,0)
         const map=this.make.tilemap({key:'maze-4'});
-        const tileset=map.addTilesetImage('walls_1x2','tiles',32,58)
-        const maze_wall=map.createLayer('Tile Layer 1',tileset,100,0);
+        const tileset=map.addTilesetImage('BasicTiles','wall-tiles',32,32)
+        const maze_wall=map.createLayer('layerStone',tileset,100,50);
     
         //maze_wall.setCollisionByProperty({collides:true});
         // maze_wall.setCollisionBetween(0,9);
