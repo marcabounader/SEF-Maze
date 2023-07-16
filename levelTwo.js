@@ -36,7 +36,7 @@ export default class levelTwo extends Phaser.Scene{
     update(){
         if (this.cursors.left.isDown){
             this.player.x-=2;
-            this.scene.start('levelOne');   
+            this.scene.start('levelThree');   
 
           }
           if (this.cursors.right.isDown){
