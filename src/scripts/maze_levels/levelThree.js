@@ -16,7 +16,7 @@ export default class levelThree extends Phaser.Scene{
     //To Add player+position
     this.player = this.physics.add.sprite(520, 50, 'player');
     this.player.setCollideWorldBounds(true);
-    this.circle=this.physics.add.existing(this.add.circle(560,830,10,'#00ff04'));
+    this.circle=this.physics.add.existing(this.add.circle(560,830,10,'0x08000'));
 
       maze_wall.setCollisionBetween(0,8);
 

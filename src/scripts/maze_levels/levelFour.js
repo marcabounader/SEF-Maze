@@ -23,7 +23,7 @@ export default class levelFour extends Phaser.Scene{
         //To set scale
         this.player.setScale(1,1);
         this.player.setCollideWorldBounds(true);
-        this.circle=this.physics.add.existing(this.add.circle(30,770,12,'#00ff04'));
+        this.circle=this.physics.add.existing(this.add.circle(30,770,12,'0x08000'));
 
         this.cursors=this.input.keyboard.createCursorKeys();
     
