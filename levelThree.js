@@ -20,7 +20,7 @@ export default class levelThree extends Phaser.Scene{
 
       // const mazer=this.add.sprite(128,128,'player','PLAYER_WALK_D')
       this.player = this.add.sprite(200, 0.5, 'player');
-      this.player.setScale(1,1);
+      this.player.setScale(0.5,0.5);
       this.cursors=this.input.keyboard.createCursorKeys();
       // this.physics.add.collider(this.player,maze_wall,() => {
           
