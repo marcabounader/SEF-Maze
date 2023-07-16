@@ -17,6 +17,7 @@ export default class levelThree extends Phaser.Scene{
       this.cursors=this.input.keyboard.createCursorKeys();
     //To Add player+position
     this.player = this.physics.add.sprite(this.game.config.width/2, 0, 'player');
+    this.circle=this.physics.add.existing(this.add.circle(595,750,10,'#00ff04'));
 
       maze_wall.setCollisionBetween(0,8);
 
@@ -31,15 +32,18 @@ export default class levelThree extends Phaser.Scene{
     this.physics.add.collider(this.player,maze_wall,() => {
     
     })
+    this.physics.add.collider(this.player,this.circle,() => {
+      this.scene.start('levelFour')
+    })
     //To set scale
     this.player.setScale(1,1);
-    // this.time.addEvent({
-    //   delay: 3000,
-    //   loop: false,
-    //   callback: () => {
-    //       this.scene.start("levelFour");
-    //   }
-    // })
+    this.time.addEvent({
+      delay: 1000,
+      loop: false,
+      callback: () => {
+          this.scene.start("levelFour");
+      }
+    })
     
 
   }

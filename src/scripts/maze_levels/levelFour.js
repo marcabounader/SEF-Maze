@@ -13,7 +13,6 @@ export default class levelFour extends Phaser.Scene{
         const map=this.make.tilemap({key:'maze-4'});
         const tileset=map.addTilesetImage('BasicTiles','wall-tiles',32,32)
         const maze_wall=map.createLayer('layerStone',tileset,100,50);
-    
         maze_wall.setCollisionBetween(0,55);
 
         this.cursors=this.input.keyboard.createCursorKeys();
@@ -22,6 +21,7 @@ export default class levelFour extends Phaser.Scene{
         this.player = this.physics.add.sprite(this.game.config.width/2, 0, 'player');
         //To set scale
         this.player.setScale(1,1);
+        this.circle=this.physics.add.existing(this.add.circle(110,740,10,'#00ff04'));
 
     
       let debugGraphics=this.add.graphics().setAlpha(0.7);
@@ -33,6 +33,9 @@ export default class levelFour extends Phaser.Scene{
     
         this.physics.add.collider(this.player,maze_wall,() => {
     
+        })
+        this.physics.add.collider(this.player,this.circle,() => {
+          // this.scene.start('levelTwo')
         })
         // this.time.addEvent({
         //   delay: 3000,
