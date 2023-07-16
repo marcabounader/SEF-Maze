@@ -20,7 +20,7 @@ export default class levelTwo extends Phaser.Scene{
         //To Add player+position
         this.player = this.physics.add.sprite(this.game.config.width/2, 0, 'player');
         //To set scale
-        this.player.setScale(1,1);
+        this.player.setScale(0.9,0.9);
         
         this.cursors=this.input.keyboard.createCursorKeys();
         this.circle=this.physics.add.existing(this.add.circle(470,840,10,'#00ff04'));
