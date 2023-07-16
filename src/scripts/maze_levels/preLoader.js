@@ -5,11 +5,11 @@ export default class preLoader extends Phaser.Scene{
 
     preload(){
 
-        //Tileheight must be 30!!!
+
         this.load.image('tiles','src\\assets\\tilemaps\\walls_1x2.png')
         this.load.image("wall-tiles","src\\assets\\tilemaps\\wall-tiles.png")
 
-        // Player+Animation (21,26)
+
         this.load.spritesheet('player', 'src\\assets\\sprites\\player.png', { frameWidth: 21, frameHeight: 26 });
         this.load.atlas('player', 'src\\assets\\sprites\\player.png', 'src\\assets\\sprites\\player.json')
 
@@ -22,7 +22,7 @@ export default class preLoader extends Phaser.Scene{
     }
 
     create(){
-           //To change Sprite
+
            this.anims.create({
             key: 'left',
             frames: this.anims.generateFrameNumbers('player', { start: 66, end: 71 }),
@@ -58,7 +58,6 @@ export default class preLoader extends Phaser.Scene{
             repeat: -1
           });
 
-      this.cursors=this.input.keyboard.createCursorKeys();
 
         this.scene.start('levelOne');
     }
