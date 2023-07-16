@@ -3,12 +3,11 @@ import Phaser from 'phaser';
 let maze_container = document.getElementById('maze-subcontainer');
 
 function preload() {
-  // this.load.image({
-  //   key: 'tiles',
-  //   url: 'src/assets/tiles.png',
-  // });
-
-   this.load.tilemapTiledJSON('map', 'src/assets/map1.json');
+  this.load.image({
+    key: 'tiles',
+    url: 'src/assets/tiles.png',
+  });
+  this.load.tilemapTiledJSON('map', 'src/assets/map1.json');
 }
 
 function create() {
@@ -24,7 +23,7 @@ function create() {
   const tileset = map.addTilesetImage('tile1', 'tiles');
 
   // Create a new layer using the tileset
-  const layer = map.createLayer('test', tileset, 0, 0);
+  const layer = map.createLayer('toplayer', tileset, 0, 0);
 
   gameState.layer = layer;
   gameState.layer.setCollisionBetween(1, 100);
@@ -61,6 +60,7 @@ const config = {
   type: Phaser.AUTO,
   width: 800,
   height: 600,
+  backgroundColor: "#5f2a55",
   autoCenter: Phaser.Scale.CENTER_BOTH,
   parent: maze_container,
   scene: {
