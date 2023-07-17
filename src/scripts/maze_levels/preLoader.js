@@ -65,7 +65,7 @@ export default class preLoader extends Phaser.Scene{
     });
 
 
-        this.scene.start('levelTwo');
+        this.scene.start('levelOne');
     }
 
 }
