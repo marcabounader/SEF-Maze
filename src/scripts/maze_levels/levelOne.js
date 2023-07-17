@@ -18,19 +18,19 @@ export default class levelOne extends Phaser.Scene{
     this.scoreLabel = this.createScoreLabel(16, 16, 0);
     this.add.text(1050,16,"level 1",{ fontSize: '32px', fill: '#000' })
     this.player = this.physics.add.sprite(870, 80, 'player');
-    this.player.setScale(1.6);
+    this.player.setScale(1.4);
     this.player.setCollideWorldBounds(true);
 
     this.circle=this.physics.add.existing(this.add.circle(160,830,15,'0x08000'));
 
     this.cursors=this.input.keyboard.createCursorKeys();
 
-    let debugGraphics=this.add.graphics().setAlpha(0.7);
-    maze_wall.renderDebug(debugGraphics,{
-          tileColor:null,
-          collidingTileColor: new Phaser.Display.Color(243,234,48,255),
-          faceColor:new Phaser.Display.Color(40,39,37,255)
-    })
+    // let debugGraphics=this.add.graphics().setAlpha(0.7);
+    // maze_wall.renderDebug(debugGraphics,{
+    //       tileColor:null,
+    //       collidingTileColor: new Phaser.Display.Color(243,234,48,255),
+    //       faceColor:new Phaser.Display.Color(40,39,37,255)
+    // })
 
     this.physics.add.collider(this.player,maze_wall,() => {
 

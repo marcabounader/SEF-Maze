@@ -23,16 +23,18 @@ export default class levelFour extends Phaser.Scene{
         this.player = this.physics.add.sprite(950, 20, 'player');
         this.player.setScale(1,1);
         this.player.setCollideWorldBounds(true);
+        this.player.setScale(1.2);
+
         this.circle=this.physics.add.existing(this.add.circle(30,770,12,'0x08000'));
 
         this.cursors=this.input.keyboard.createCursorKeys();
     
-        let debugGraphics=this.add.graphics().setAlpha(0.7);
-        maze_wall.renderDebug(debugGraphics,{
-                tileColor:null,
-                collidingTileColor: new Phaser.Display.Color(243,234,48,255),
-                faceColor:new Phaser.Display.Color(40,39,37,255)
-        })
+        // let debugGraphics=this.add.graphics().setAlpha(0.7);
+        // maze_wall.renderDebug(debugGraphics,{
+        //         tileColor:null,
+        //         collidingTileColor: new Phaser.Display.Color(243,234,48,255),
+        //         faceColor:new Phaser.Display.Color(40,39,37,255)
+        // })
     
         this.physics.add.collider(this.player,maze_wall,() => {
     

@@ -14,7 +14,7 @@ export default class preLoader extends Phaser.Scene{
         this.load.image("wall-tiles","src\\assets\\tilemaps\\wall-tiles.png")
 
         //sprit (21,2)
-        this.load.spritesheet('player', 'src\\assets\\sprites\\player.png', { frameWidth: 20, frameHeight:27 });
+        // this.load.spritesheet('player', 'src\\assets\\sprites\\player.png', { frameWidth: 19, frameHeight:27 });
         this.load.atlas('player', 'src\\assets\\sprites\\player.png', 'src\\assets\\sprites\\player.json')
 
         this.load.tilemapTiledJSON('maze-1','src\\assets\\tilemaps\\map-1\\maze.json');
@@ -31,8 +31,9 @@ export default class preLoader extends Phaser.Scene{
 
       this.anims.create({
       key: 'left',
-      frames: this.anims.generateFrameNumbers('player', { start: 66, end: 71 }),
+      frames: this.anims.generateFrameNumbers('player', { prefix:'PLAYER_WALK_L',start: 66, end: 71 }),
       frameRate: 10,
+      repeat: 0
     });
 
     this.anims.create({
@@ -44,27 +45,27 @@ export default class preLoader extends Phaser.Scene{
 
     this.anims.create({
       key: 'right',
-      frames: this.anims.generateFrameNumbers('player', { start: 46, end: 51 }),
+      frames: this.anims.generateFrameNumbers('player', {prefix:'PLAYER_WALK_R', start: 46, end: 51 }),
       frameRate: 10,
       repeat: 0
     });
 
     this.anims.create({
       key: 'up',
-      frames: this.anims.generateFrameNumbers('player', { start: 24, end: 29 }),
+      frames: this.anims.generateFrameNumbers('player', { prefix:'PLAYER_WALK_U', start: 26, end: 31}),
       frameRate: 10,
       repeat: 0
     });
 
     this.anims.create({
       key: 'down',
-      frames: this.anims.generateFrameNumbers('player', { start: 6, end: 11 }),
+      frames: this.anims.generateFrameNumbers('player', {prefix:'PLAYER_WALK_D', start: 6, end: 11 }),
       frameRate: 10,
       repeat: 0
     });
 
 
-        this.scene.start('levelOne');
+        this.scene.start('levelTwo');
     }
 
 }

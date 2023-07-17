@@ -6,7 +6,7 @@ export default class levelTwo extends Phaser.Scene{
         super('levelTwo')
     }
     init(data){
-      this.score=data.getScore();
+      // this.score=data.getScore();
     }
     preload(){
     
@@ -18,10 +18,11 @@ export default class levelTwo extends Phaser.Scene{
         const tileset=map.addTilesetImage('walls_1x2','tiles',32,58)
         const maze_wall=map.createLayer('Tile Layer 1',tileset,100,50);
         maze_wall.setCollisionBetween(0,8);
+
         this.add.text(1050,16,"level 2",{ fontSize: '32px', fill: '#000' })
-        this.scoreLabel = this.createScoreLabel(16, 16, this.score);
+        this.scoreLabel = this.createScoreLabel(16, 16, 0);
         this.player = this.physics.add.sprite(560, 70, 'player');
-        this.player.setScale(0.9,0.9);
+        this.player.setScale(1);
         this.player.setCollideWorldBounds(true);
         
         this.circle=this.physics.add.existing(this.add.circle(470,840,10,'0x08000'));
@@ -29,12 +30,12 @@ export default class levelTwo extends Phaser.Scene{
         this.cursors=this.input.keyboard.createCursorKeys();
 
     
-        let debugGraphics=this.add.graphics().setAlpha(0.7);
-        maze_wall.renderDebug(debugGraphics,{
-                tileColor:null,
-                collidingTileColor: new Phaser.Display.Color(243,234,48,255),
-                faceColor:new Phaser.Display.Color(40,39,37,255)
-        })
+        // let debugGraphics=this.add.graphics().setAlpha(0.7);
+        // maze_wall.renderDebug(debugGraphics,{
+        //         tileColor:null,
+        //         collidingTileColor: new Phaser.Display.Color(243,234,48,255),
+        //         faceColor:new Phaser.Display.Color(40,39,37,255)
+        // })
     
 
         this.physics.add.collider(this.player,maze_wall,() => {
